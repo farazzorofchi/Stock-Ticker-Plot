@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <form action="/Home" method="post">
+    
+        <div>
+            <input size="10" autocomplete="off" autofocus class="form-control" name="ticker" placeholder="GOOG" type="text" required />
+            <label for="ticker">Ticker Symbol</label>
+        </div>
+        
+         <div>
+		 	<input size="10" autocomplete="off" autofocus class="form-control" name="startdate" placeholder="2020-01-31" type="text" required />
+		 	<label for="startdate">Start Date (yyyy-mm-dd)</label>
+		</div>
+		
+		<div>
+		 	<input size="10" autocomplete="off" autofocus class="form-control" name="enddate" placeholder="2020-12-31" type="text" required />
+		 	<label for="enddate">End Date (yyyy-mm-dd)</label>
+		</div>
+
+        <button class="btn btn-primary" type="submit">Enter</button>
+    </form>
+{% endblock %}

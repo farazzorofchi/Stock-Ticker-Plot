@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    input
+{% endblock %}
+
+{% block main %}
+    <form action="/candlestick" method="get">
+    
+        <div>
+            <input size="10" autocomplete="off" autofocus class="form-control" name="ticker" placeholder="GOOG" type="text" required />
+            <label for="ticker">Ticker Symbol</label>
+        </div>
+        
+         <div>
+		 	<input size="10" autocomplete="off" autofocus class="form-control" name="startdate" placeholder="2020-01-31" type="text" required />
+		 	<label for="startdate">Start Date</label>
+		</div>
+		
+		<div>
+		 	<input size="10" autocomplete="off" autofocus class="form-control" name="enddate" placeholder="2020-12-31" type="text" required />
+		 	<label for="enddate">End Date</label>
+		</div>
+
+        <button class="btn btn-primary" type="submit">Show Plot</button>
+    </form>
+{% endblock %}
